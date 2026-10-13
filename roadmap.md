@@ -1,0 +1,3 @@
+- [ ] Build shared red-and-white site styling, navigation, footer, and single-source telephone CTAs.
+- [ ] Create Home, Internet, Cable TV, Contact, and four legal pages with page-specific metadata and relevant imagery.
+- [ ] Verify all routes, images, navigation, phone links, and mobile layout; check build diagnostics.
