@@ -10,6 +10,8 @@ import {
   independenceStatement,
   legalBusinessName,
   legalNavigation,
+  footerOldPhoneDisplay,
+  footerOldPhoneHref,
   phoneDisplay,
   phoneHref,
   siteName,
@@ -161,6 +163,9 @@ export function SiteFooter() {
             <p className="footer-legal-name">{legalBusinessName}</p>
             <a className="footer-contact" href={phoneHref}>
               <Phone size={15} aria-hidden="true" /> {phoneDisplay}
+            </a>
+            <a className="footer-contact" href={footerOldPhoneHref}>
+              <Phone size={15} aria-hidden="true" /> {footerOldPhoneDisplay}
             </a>
             <a className="footer-contact" href={emailHref}>
               <Mail size={15} aria-hidden="true" /> {emailAddress}
