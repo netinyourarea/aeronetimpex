@@ -2,8 +2,8 @@ export const siteName = "Aeronet Impex";
 
 // TODO: replace the legal business name and email with the real details.
 export const legalBusinessName = "Aeronet Impex";
-export const phoneDisplay = "(833) 457-4435";
-export const phoneHref = "tel:+18334574435";
+export const phoneDisplay = "(833) 457-7986";
+export const phoneHref = "tel:+18334577986";
 export const emailAddress = "info@example.com";
 export const emailHref = `mailto:${emailAddress}`;
 
