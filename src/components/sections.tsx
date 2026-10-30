@@ -120,10 +120,10 @@ export function CtaPair() {
 }
 
 const doItems = [
-  "Understand internet and broadband service options",
-  "Get practical guidance on common connectivity issues",
-  "Learn how to navigate service provider processes",
-  "Receive general informational support related to cable TV services",
+  "Troubleshoot internet that is slow, down, or dropping",
+  "Fix Wi-Fi dead zones, weak signal, and device connection problems",
+  "Recognize the signs of a service outage and know what to do next",
+  "Get help with cable TV signal and equipment questions",
 ];
 
 const dontItems = [
@@ -150,7 +150,7 @@ export function Scope() {
             ))}
           </ol>
           <p className="scope-foot">
-            Our role is limited to independent guidance and assistance only.
+            Call us and talk to an advisor. We do not take requests through web forms.
           </p>
         </article>
         <article className="scope-card scope-card--dont">

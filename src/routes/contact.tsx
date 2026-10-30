@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ClipboardList, PhoneCall, ThumbsUp } from "lucide-react";
 
 import contactCall from "@/assets/contact-call.jpg";
+import { CallForm } from "@/components/call-form";
 import { CardGrid, CtaPair, SectionIntro } from "@/components/sections";
 import { ComplianceNote } from "@/components/site-shell";
 import {
@@ -19,28 +20,31 @@ const expect = [
   {
     icon: PhoneCall,
     title: "1. You call",
-    text: "Tell us which internet or cable TV topic you have a question about.",
+    text: "Tell us if your internet is down, slow, or your Wi-Fi is acting up.",
   },
   {
     icon: ClipboardList,
     title: "2. We listen",
-    text: "An advisor learns what you are trying to understand.",
+    text: "An advisor asks about your modem lights, devices, and when the problem started.",
   },
   {
     icon: ThumbsUp,
-    title: "3. General guidance",
-    text: "You receive general informational support. Account actions stay with your provider.",
+    title: "3. Guided steps",
+    text: "You work through troubleshooting and outage checks. Account actions stay with your provider.",
   },
 ];
 
 function ContactPage() {
-  usePageMeta("Contact", "Contact us for internet and cable TV guidance.");
+  usePageMeta(
+    "Contact",
+    "Call us for help with internet outages, slow speeds, and Wi-Fi problems.",
+  );
   return (
     <main>
       <section className="contact-top">
         <div className="contact-copy">
           <p className="eyebrow">Contact</p>
-          <h1>Contact us.</h1>
+          <h1>Call us. We pick up.</h1>
           <p>{legalBusinessName}</p>
           <a className="contact-number" href={phoneHref}>
             {phoneDisplay}
@@ -54,8 +58,12 @@ function ContactPage() {
         <img className="contact-image" src={contactCall} alt="Person on a phone call" />
       </section>
 
-      <section className="section-block content-width" style={{ paddingTop: 96 }}>
-        <SectionIntro eyebrow="What to expect" title="A simple, informational call." />
+      <section className="section-block content-width" style={{ paddingTop: 72 }}>
+        <CallForm />
+      </section>
+
+      <section className="section-block content-width" style={{ paddingTop: 72 }}>
+        <SectionIntro eyebrow="What to expect" title="A simple phone call." />
         <CardGrid items={expect} />
       </section>
     </main>

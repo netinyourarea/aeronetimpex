@@ -26,13 +26,13 @@ export const Route = createFileRoute("/")({ component: HomePage });
 const principles = [
   {
     icon: Headphones,
-    title: "Plain-language answers",
-    text: "Speak with an advisor who explains internet and cable TV topics clearly.",
+    title: "Talk to a real person",
+    text: "Call and describe your internet, Wi-Fi, or outage problem in your own words.",
   },
   {
     icon: MapPin,
-    title: "Informational support",
-    text: "Understand common terms, options, and how service provider processes work.",
+    title: "Practical troubleshooting",
+    text: "Walk through common steps for slow speeds, dropped Wi-Fi, and lost connections.",
   },
   {
     icon: ShieldCheck,
@@ -43,20 +43,20 @@ const principles = [
 
 const topics = [
   {
-    title: "Home internet",
-    text: "Connection types, speeds in everyday terms, and common questions.",
+    title: "Internet not working",
+    text: "No connection, slow speeds, or random drops: what to check first.",
     image: fiber,
     imageAlt: "Fiber optic cables",
   },
   {
-    title: "Wi-Fi at home",
-    text: "Router placement, coverage, and connecting more devices.",
+    title: "Wi-Fi problems",
+    text: "Dead zones, weak signal, and devices that will not connect.",
     image: homeRouter,
     imageAlt: "Home Wi-Fi router",
   },
   {
-    title: "Cable TV",
-    text: "Common terms, equipment, and what to ask your provider.",
+    title: "Service outages",
+    text: "How to tell if it is your home or a wider outage, and what to do next.",
     image: television,
     imageAlt: "Living room television",
   },
@@ -65,40 +65,46 @@ const topics = [
 const concerns = [
   {
     icon: Wifi,
-    title: "Slow or unstable Wi-Fi",
-    text: "General tips on placement and interference.",
+    title: "Internet is down",
+    text: "Lights blinking, no signal, or nothing loads on any device.",
   },
   {
     icon: Router,
-    title: "Router and modem basics",
-    text: "What each device does and how they connect.",
+    title: "Slow or unstable Wi-Fi",
+    text: "Buffering, lag, and weak signal in certain rooms.",
   },
   {
     icon: Tv,
-    title: "TV picture or signal",
-    text: "Common reasons a cable TV signal may be affected.",
+    title: "Outage in your area",
+    text: "Not sure if it is a local outage? We can help you check the signs.",
   },
   {
     icon: MessageSquareText,
-    title: "Talking to your provider",
-    text: "How to prepare for a call with your service provider.",
+    title: "Router and modem setup",
+    text: "Connecting, restarting, and placing your equipment.",
   },
   {
     icon: HelpCircle,
-    title: "Understanding terms",
-    text: "Plain-language meanings for common service terms.",
+    title: "Cable TV signal",
+    text: "No picture, pixelation, or channels missing.",
   },
   {
     icon: PhoneCall,
-    title: "Just a quick question",
-    text: "Not sure where to begin? Give us a call.",
+    title: "Not sure what is wrong?",
+    text: "Give us a call and we will help you narrow it down.",
   },
 ];
 
 const steps = [
-  ["Call us", "Tell us which internet or cable TV topic you have a question about."],
-  ["Share a few details", "Describe your concern and the devices or TVs involved."],
-  ["Get general guidance", "Receive informational support you can use with your provider."],
+  ["Call us", "Tell us whether your internet is down, slow, or your Wi-Fi is acting up."],
+  [
+    "Describe the problem",
+    "Share what you see: modem lights, which devices are affected, and when it started.",
+  ],
+  [
+    "Get guided steps",
+    "Work through troubleshooting and outage checks with an advisor on the line.",
+  ],
 ];
 
 const faqs = [
@@ -116,26 +122,34 @@ const faqs = [
   },
   {
     q: "What happens when I call?",
-    a: "You speak with an advisor who offers general information about internet, broadband, Wi-Fi, and cable TV topics.",
+    a: "You speak with an advisor who helps you work through internet, Wi-Fi, and outage problems step by step.",
+  },
+  {
+    q: "Do I need to fill out a form?",
+    a: "No. We do not take requests through forms. Just call and talk to an advisor.",
+  },
+  {
+    q: "How do I know if it is an outage?",
+    a: "If every device is offline, your modem lights look abnormal, and restarting does not help, it may be an outage. Your provider can confirm outages in your area.",
   },
 ];
 
 function HomePage() {
   usePageMeta(
-    "Home Internet & Cable TV Guidance",
-    "General guidance and informational support for home internet, Wi-Fi, and cable TV questions.",
+    "Internet, Wi-Fi & Outage Help",
+    "Call for help with slow internet, Wi-Fi problems, connection drops, and service outages.",
   );
   return (
     <main>
       <section className="hero-home">
         <div className="hero-copy">
-          <p className="eyebrow">Internet · Wi-Fi · Cable TV</p>
+          <p className="eyebrow">Internet · Wi-Fi · Outages</p>
           <h1>
-            Clear answers for your <span>home internet and TV.</span>
+            Lost your connection? <span>Let's get you back online.</span>
           </h1>
           <p className="hero-description">
-            Have a question about your connection, Wi-Fi, or cable TV? Talk it through with an
-            advisor and get straightforward, general guidance.
+            Slow speeds, dropped connections, dead zones, or a suspected outage? Call and talk to an
+            advisor who will walk you through it. No forms needed.
           </p>
           <CtaPair />
         </div>
@@ -156,15 +170,15 @@ function HomePage() {
       <Scope />
 
       <section className="section-block content-width">
-        <SectionIntro eyebrow="Topics" title="What you can ask us about." />
+        <SectionIntro eyebrow="Topics" title="What you can call us about." />
         <CardGrid items={topics} />
       </section>
 
       <section className="section-block content-width">
         <SectionIntro
           eyebrow="Common concerns"
-          title="Questions we hear often."
-          text="If any of these sound familiar, a short call may help you sort it out."
+          title="Problems we help with."
+          text="If any of these sound familiar, a short call can help you sort it out."
         />
         <CardGrid items={concerns} />
       </section>
@@ -172,19 +186,17 @@ function HomePage() {
       <section className="service-feature content-width">
         <img className="feature-image" src={homeRouter} alt="Home Wi-Fi router" />
         <div className="feature-copy">
-          <h2>Internet and broadband topics</h2>
-          <p>
-            Learn about general connection types, Wi-Fi basics, and common connectivity concerns.
-          </p>
-          <TextArrowLink to="/internet-services">Internet information</TextArrowLink>
+          <h2>Internet, Wi-Fi, and outage help</h2>
+          <p>Learn what to check when your connection is slow, drops, or goes out completely.</p>
+          <TextArrowLink to="/internet-services">Internet and outage help</TextArrowLink>
         </div>
       </section>
 
       <section className="entertainment-band">
         <div className="entertainment-copy">
           <p className="eyebrow">Cable TV</p>
-          <h2>General cable TV information.</h2>
-          <p>Understand common cable TV terms and equipment topics.</p>
+          <h2>Cable TV not working too?</h2>
+          <p>TV and internet often share equipment. Call about both at once.</p>
           <TextArrowLink to="/cable-tv-services">Cable TV information</TextArrowLink>
         </div>
         <img className="entertainment-image" src={television} alt="Living room television" />
@@ -214,18 +226,18 @@ function HomePage() {
         image={contactCall}
         alt="Person speaking with an advisor on the phone"
         title="Before you call."
-        text="Having a few details ready helps keep the conversation focused."
+        text="Having a few details ready helps us find the problem faster."
         items={[
-          "A short description of your question or concern",
-          "The name of your current service provider, if any",
-          "The devices or TVs you are asking about",
+          "What is happening: no internet, slow speeds, or Wi-Fi drops",
+          "When it started and whether other devices are affected",
+          "The lights showing on your modem or router",
         ]}
       />
 
       <Faq items={faqs} />
 
       <section className="final-cta">
-        <h2>Questions about internet or cable TV?</h2>
+        <h2>Internet or Wi-Fi not working? Call now.</h2>
         <CallButton />
       </section>
     </main>

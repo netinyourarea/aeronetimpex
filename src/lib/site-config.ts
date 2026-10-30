@@ -7,8 +7,8 @@ export const phoneHref = "tel:+18335812461";
 export const emailAddress = "info@example.com";
 export const emailHref = `mailto:${emailAddress}`;
 
-export const primaryCta = "Talk to a Third-Party Internet Advisor";
-export const secondaryCta = "Call for Independent Service Guidance";
+export const primaryCta = "Call About Your Internet or Wi-Fi";
+export const secondaryCta = "Call for Outage and Connection Guidance";
 export const ctaMicrotext = "Not an ISP. No brand affiliation.";
 
 export const independenceStatement = `${siteName} is an independent third-party service assistance provider. We are not affiliated with, authorized by, or endorsed by any internet, cable, or telecom service provider.`;

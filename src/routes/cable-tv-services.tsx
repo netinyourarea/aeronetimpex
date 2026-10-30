@@ -53,9 +53,10 @@ function CableTvPage() {
       <section className="service-hero service-hero--tv">
         <div className="service-hero-copy">
           <p className="eyebrow">Cable TV</p>
-          <h1>Cable TV questions, answered clearly.</h1>
+          <h1>No signal or picture? Call us.</h1>
           <p className="hero-description">
-            General informational support related to cable TV services for your household.
+            Cable TV and internet often share equipment. Call about TV signal problems, outages, or
+            your whole setup.
           </p>
           <CtaPair />
         </div>
@@ -96,7 +97,7 @@ function CableTvPage() {
       <Faq items={faqs} />
 
       <section className="callout-band">
-        <h2>Questions about cable TV topics?</h2>
+        <h2>Cable TV or internet not working? Call now.</h2>
         <CallButton />
       </section>
     </main>

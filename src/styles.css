@@ -1816,3 +1816,26 @@ img {
   color: var(--muted-foreground);
   font-size: 12px;
 }
+
+.call-form {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.call-form h2 {
+  margin: 0 0 8px;
+}
+
+.call-form p {
+  margin: 0 0 20px;
+}
+
+.call-form-fields {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 20px;
+}

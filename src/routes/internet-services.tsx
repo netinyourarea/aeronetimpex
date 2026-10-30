@@ -12,20 +12,20 @@ export const Route = createFileRoute("/internet-services")({ component: Internet
 
 const topics = [
   {
-    title: "Connection types",
-    text: "General information about fiber, cable, and wireless connections.",
+    title: "No internet or outages",
+    text: "Check modem lights, restart safely, and learn whether a wider outage may be the cause.",
     image: fiber,
     imageAlt: "Fiber optic cables",
   },
   {
     title: "Wi-Fi and routers",
-    text: "Common guidance on placement, coverage, and household devices.",
+    text: "Fix weak signal, dead zones, and devices that keep disconnecting.",
     image: homeRouter,
     imageAlt: "Home Wi-Fi router",
   },
   {
-    title: "Connected homes",
-    text: "How many devices share a connection and why it can matter.",
+    title: "Slow speeds",
+    text: "Find out why a busy home network slows down and what you can change.",
     image: connectedHome,
     imageAlt: "Connected home",
   },
@@ -35,17 +35,17 @@ const uses = [
   {
     icon: Tv,
     title: "Streaming",
-    text: "Video streaming generally benefits from a steady connection on each screen.",
+    text: "Fix buffering and freezing on every screen in the house.",
   },
   {
     icon: Laptop,
     title: "Working from home",
-    text: "Video calls and file sharing rely on a stable connection.",
+    text: "Keep video calls and uploads stable when the connection drops.",
   },
   {
     icon: Gamepad2,
     title: "Gaming",
-    text: "Wired connections are commonly suggested for lower delay.",
+    text: "Reduce lag and disconnects with the right setup.",
   },
 ];
 
@@ -55,8 +55,16 @@ const faqs = [
     a: "No. We are not an Internet Service Provider and do not sell internet subscriptions.",
   },
   {
-    q: "Can you fix my connection?",
-    a: "We offer general guidance on common connectivity issues. We do not provide guaranteed technical fixes.",
+    q: "Can you help if my internet is out?",
+    a: "Yes, call and we will walk you through checks for your equipment and signs of an outage. We cannot guarantee a fix, and only your provider can restore service on its network.",
+  },
+  {
+    q: "What if it is an outage in my area?",
+    a: "We can help you recognize the signs and point you to what to do next, such as checking with your provider. Outages are resolved by the provider.",
+  },
+  {
+    q: "Do I have to submit a form?",
+    a: "No. Just call. Our advisors take your questions by phone only.",
   },
   {
     q: "Can you help me navigate my provider's process?",
@@ -66,18 +74,18 @@ const faqs = [
 
 function InternetPage() {
   usePageMeta(
-    "Internet & Broadband Guidance",
-    "General informational guidance on internet, broadband, and Wi-Fi for your household.",
+    "Internet, Wi-Fi & Outage Help",
+    "Call for help with internet outages, slow speeds, and Wi-Fi problems at home.",
   );
   return (
     <main>
       <section className="service-hero">
         <div className="service-hero-copy">
-          <p className="eyebrow">Internet &amp; broadband</p>
-          <h1>Internet guidance that makes sense.</h1>
+          <p className="eyebrow">Internet · Wi-Fi · Outages</p>
+          <h1>Internet down or Wi-Fi slow? Call us.</h1>
           <p className="hero-description">
-            General guidance and informational support related to internet, broadband, and Wi-Fi for
-            your household.
+            Get help with outages, dropped connections, slow speeds, and Wi-Fi dead zones. Call and
+            an advisor will guide you through it.
           </p>
           <CtaPair />
         </div>
@@ -87,12 +95,12 @@ function InternetPage() {
       </section>
 
       <section className="section-block content-width" style={{ paddingTop: 72 }}>
-        <SectionIntro eyebrow="Topics" title="General information, not provider support." />
+        <SectionIntro eyebrow="Topics" title="What we can help you with." />
         <CardGrid items={topics} />
       </section>
 
       <section className="section-block content-width">
-        <SectionIntro eyebrow="By use" title="Everyday connectivity topics." />
+        <SectionIntro eyebrow="By use" title="Problems by how you use the internet." />
         <CardGrid items={uses} />
       </section>
 
@@ -100,19 +108,19 @@ function InternetPage() {
         reverse
         image={connectedHome}
         alt="A home with many connected devices"
-        title="Questions you may want to ask your provider."
-        text="We can help you think through general questions. Answers come from your provider."
+        title="When it might be an outage."
+        text="Signs to look for. Call and we will help you sort out equipment trouble from a wider outage."
         items={[
-          "What equipment is included with my service?",
-          "How do I report a connection issue?",
-          "What are the terms of my agreement?",
+          "Every device is offline at the same time",
+          "Modem lights are off, red, or blinking",
+          "Restarting your equipment does not help",
         ]}
       />
 
       <Faq items={faqs} />
 
       <section className="callout-band">
-        <h2>Questions about internet topics?</h2>
+        <h2>Internet or Wi-Fi not working? Call now.</h2>
         <CallButton />
       </section>
     </main>

@@ -116,12 +116,11 @@ export function SiteFooter() {
       <div className="footer-inner">
         <div className="footer-cta">
           <div>
-            <p className="footer-cta-label">Questions? Call us</p>
+            <p className="footer-cta-label">Internet or Wi-Fi down? Call us</p>
             <a className="footer-cta-phone" href={phoneHref}>
               <Phone size={24} aria-hidden="true" /> {phoneDisplay}
             </a>
           </div>
-          <p className="footer-cta-note">Not an ISP. No brand affiliation.</p>
         </div>
 
         <div className="footer-top">
@@ -133,7 +132,7 @@ export function SiteFooter() {
               <span>{siteName}</span>
             </Link>
             <p className="footer-copy">
-              General guidance on home internet, Wi-Fi, and cable TV topics.
+              Call for help with internet, Wi-Fi, outages, and cable TV problems.
             </p>
           </div>
           <div>
